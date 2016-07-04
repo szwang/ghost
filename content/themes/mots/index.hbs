@@ -1,0 +1,17 @@
+{{!< default}}
+{{! The above will include this template into the body of the default template }}
+
+{{> sidebar}}
+
+<main id="content" role="main">
+	{{! Including the navigation. Drop downs are not supported - partials/navigation.hbs }}
+	{{> navigation}}
+
+	<div class="inner list-posts">
+
+		{{! The tag below includes the post loop - partials/loop.hbs }}
+		{{> loop}}
+
+		{{> footer}}
+	</div>
+</main>

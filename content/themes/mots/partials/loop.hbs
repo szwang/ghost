@@ -1,0 +1,20 @@
+{{! Each post will be output using this markup }}
+{{#foreach posts}}
+
+<article class="{{post_class}}">
+	{{#if image}}
+		<div class="post-cover"><a href="{{url}}" title="{{title}}"><img src="{{image}}" alt="{{title}}"></a></div>
+	{{/if}}
+	<header class="post-header">
+		<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+		<span class="post-meta">{{#author}}By <a href="{{url}}" title="{{name}}">{{name}}</a>{{/author}} on <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="MMM DD, YYYY"}}</time> {{#if tags}}, tagged: {{tags}}{{/if}}</span>
+	</header>
+	<section class="post-excerpt">
+		<p>{{excerpt}}&hellip; <a href="{{url}}" title="{{title}}">Continue reading</a></p>
+	</section>
+</article>
+
+{{/foreach}}
+
+{{!! After all the posts, we have the previous/next pagination links }}
+{{pagination}}

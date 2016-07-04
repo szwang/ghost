@@ -1,0 +1,39 @@
+{{!< default}}
+{{! The above will include this template into the body of the default template }}
+
+{{> sidebar}}
+
+<main id="content" role="main">
+	{{! Including the navigation. Drop downs are not supported - partials/navigation.hbs }}
+	{{> navigation}}
+
+	{{#post}}
+		{{#if image}}
+			<div class="post-cover" style="background-image: url({{image}})"></div>
+		{{/if}}
+	{{/post}}
+	<div class="inner single-post">
+
+		<article class="{{post_class}}">
+
+		{{! Retrieving post data}}
+		{{#post}}
+
+			<header class="post-header">
+				<h1 class="post-title">{{title}}</h1>
+			</header>
+
+			<section class="post-content">
+				{{content}}
+			</section>
+
+			<footer class="post-footer">
+			</footer>
+
+		{{/post}}
+
+		</article>
+
+		{{> footer}}
+	</div>
+</main>

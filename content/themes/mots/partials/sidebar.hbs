@@ -1,0 +1,39 @@
+<aside id="sidebar" role="complementary" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+	<div class="blog-logo">
+		<a href="http://suzannewang.com" title="{{@blog.title}}"><img class="profile-img" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+		<a href="http://suzannewang.com" title="{{@blog.title}}">{{@blog.title}}</a>
+	</div>
+
+	<div class="blog-description"><p>{{@blog.description}}</p></div>
+
+	<div class="blog-social">
+		<ul class="clearfix">
+			<li>
+				<a target="_blank" href="https://www.facebook.com/suzanne.wang.14">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://linkedin.com/in/szwang">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href="http://github.com/szwang">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			</li>
+			<li>
+			</li>
+		</ul>
+	</div>
+</aside>

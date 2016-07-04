@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{! Document Settings }}
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		{{! Page Meta }}
+		<title>{{meta_title}}</title>
+		<meta name="description" content="{{meta_description}}">
+
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		{{! Stylesheet }}
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/prism.css" />   
+
+		{{! favicon}}
+		<link href="/assets/img/favicon.jpg" rel="shortcut icon" type="image/x-icon">
+
+		{{! Google Fonts }}
+		<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+		{{! Font Awesome}}
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		{{! HTML Shiv}}
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		{{! Ghost head hook }}
+		{{ghost_head}}
+	</head>
+	<body class="{{body_class}}">
+		<div id="wrapper">
+
+		{{! Body hook for template output}}
+		{{{body}}}
+
+		</div>
+
+		{{! Ghost footer hook }}
+		{{ghost_foot}}
+
+		{{! mots. Scripts and Plugins}}
+		<script type="text/javascript" src="/assets/js/prism.js"></script> 
+		<script src="/assets/js/plugins.min.js"></script>
+		<script src="/assets/js/mots.js"></script>
+	</body>
+</html>
